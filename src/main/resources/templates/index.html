@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h2>欢迎${user.username}光临!</h2>
+<p>您拥有的权限如下：</p>
+<ul>
+    <@shiro.hasPermission name="add"><li>增加</li></@shiro.hasPermission>
+    <@shiro.hasPermission name="delete"><li>删除</li></@shiro.hasPermission>
+    <@shiro.hasPermission name="update"><li>修改</li></@shiro.hasPermission>
+    <@shiro.hasPermission name="query"><li>查询</li></@shiro.hasPermission>
+</ul>
+
+<a href="${request.contextPath }/logOut">退出登录</a>
+
+</body>
+</html>
